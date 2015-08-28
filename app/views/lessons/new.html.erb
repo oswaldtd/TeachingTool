@@ -1,2 +1,6 @@
-<h1>Lessons#new</h1>
-<p>Find me in app/views/lessons/new.html.erb</p>
+Lessons#new
+<%= simple_form_for @lesson do |f| %>
+  <%= f.input :lesson_name %>
+  <%= f.input :lesson_number %>
+  <%= f.button :submit %>
+<% end %>
