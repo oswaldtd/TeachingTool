@@ -22,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug'
   gem 'foreman'
+  gem 'rails_12factor'
   gem 'rspec-rails'
   gem 'spring'
   gem 'table_print'
