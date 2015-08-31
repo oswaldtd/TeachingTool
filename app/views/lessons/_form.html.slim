@@ -1,0 +1,6 @@
+= simple_form_for @lesson do |f|
+	.panel-body
+		f.input :lesson_name, input_html: { class: 'form-control' }
+		f.input :lesson_number, input_html: { class: 'form-control' }
+
+	= f.button :submit, class: "btn btn-primary"
