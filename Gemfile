@@ -1,3 +1,4 @@
+ruby '2.2.2'
 source 'https://rubygems.org'
 
 gem 'slim'
@@ -12,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem "cocoon"
+
 
 group :development, :test do
   gem 'byebug'
