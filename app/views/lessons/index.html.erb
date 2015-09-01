@@ -1,6 +1,6 @@
 <h1>Lessons#index</h1>
 <ul>
 	<% @lessons.each do |lesson| %>
-		<li><%= lesson.lesson_name %> <%= lesson.lesson_number %></li>
+		<li><%=lesson.lesson_name %> - <%= lesson.lesson_number %> <%= link_to "Delete", lesson_path(lesson), method: :delete, data: { confirm: "Delete this lesson? "} %> </li>
 	<% end %>
 </ul>
