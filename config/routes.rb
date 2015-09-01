@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get 'lessons/new'
 
   resources :lessons
+
+  root "lessons#index"
 end
