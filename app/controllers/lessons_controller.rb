@@ -29,10 +29,18 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
-    params.require(:lesson).permit(:lesson_name, :lesson_number )
+    params.require(:lesson).permit(:lesson_name, :lesson_number,
+    vocabularies_attributes: [:id, :word, :meaning, :_destroy],
+    sentences_attributes: [:id, :sentence, :meaning, :_destroy],
+    books_attributes: [:id, :page_start, :page_end, :book_name, :_destroy])
   end
 
   def find_lesson
     @lesson = Lesson.find(params[:id])
   end
 end
+
+
+def project_params
+    params.require(:project).permit(:name, :description, tasks_attributes: [:id, :description, :done, :_destroy])
+  end
