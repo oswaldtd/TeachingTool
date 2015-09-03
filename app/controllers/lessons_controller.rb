@@ -8,6 +8,9 @@ class LessonsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def destroy
     @lesson.destroy
     redirect_to root_path
