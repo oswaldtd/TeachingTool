@@ -33,11 +33,12 @@ body{
   @include span-columns(7);
   @include shift(1.5);
   font-family: Open Sans, sans-serif;
-  height: 500px;
+  height: 800px;
   border: 1px solid #CCCDCD;
   background-color: #FAFAFA;
   border-radius: 2px;
   margin-top: 50px;
+  margin-bottom: 50px;
   box-shadow: 5px 5px 10px #B0B0B0;
   .head{
     background-color: #E53935;
@@ -65,25 +66,27 @@ body{
   }
   .form-control{
     height: 30px;
-    width: 300px;
     margin-left: 10px;
     font-size: 15px;
   }
   .btn-primary{
     @include span-columns(1);
+    @include shift(1);
+    position: relative;
+    top: 450px;
     border-radius: 180px;
     height: 70px;
     width: 70px;
     background-color: #E53935;
     border: none;
     box-shadow: 1px 2px 3px #B0B0B0;
-    textarea:focus, input:focus{
-      outline: 0;
-    }
+  }
+  textarea:focus, input:focus{
+    outline: 0;
   }
   .new-book, .new-vocab, .new-sentences{
     @include span-columns(2);
-    @include shift(1);
+    @include shift(.5);
     margin-top: 25px;
     h3{
       font-size: 20px;
@@ -91,15 +94,16 @@ body{
     #book, #vocabulary, #sentence{
       .links a{
         color: black;
-        }
-      .nested-fields a{
-        color: black;
+        font-size: 12px;
+        margin-left: 10px;
       }
-    }
-  }
-  .new-vocab{
-    .lesson_vocabularies_word{
-      margin-right: 10px;
+      .nested-fields{
+        margin-left: 10px;
+        a{
+        color: black;
+        font-size: 12px;
+        }
+      }
     }
   }
 }
