@@ -4,25 +4,26 @@ p= @lesson.lesson_number
 - if @lesson.books.present?
 	h2= "Book".pluralize(@lesson.books.count)
 
-ul
-	- @lesson.books.each do |book|
-		ul = book.book_name
-		ul = book.page_start
-		ul = book.page_end
+	ul
+		- @lesson.books.each do |book|
+			ul = book.book_name
+			ul = book.page_start
+			ul = book.page_end
 
 - if @lesson.vocabularies.present?
 	h2= "Vocabulary"
-ul
-	- @lesson.vocabularies.each do |vocabulary|
-		ul= vocabulary.word
-		ul= vocabulary.meaning
+	ul
+		- @lesson.vocabularies.each do |vocabulary|
+			ul= vocabulary.word
+			ul= vocabulary.meaning
 
 - if @lesson.sentences.present?
 	h2= "Sentence".pluralize(@lesson.sentences.count)
-ul
-	- @lesson.sentences.each do |sentences|
-		ul= sentences.sentence
-		ul= sentences.meaning
+	ul
+		- @lesson.sentences.each do |sentences|
+			ul= sentences.sentence
+			ul= sentences.meaning
 
 
+= link_to "edit", edit_lesson_path
 = link_to "back", lessons_url
