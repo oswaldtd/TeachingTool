@@ -7,7 +7,7 @@ describe "the create lesson process", :type => :feature do
 
   it "creates a lesson" do
     visit '/lessons/new'
-    within("#lesson") do
+    within(".panel-body") do
       fill_in 'lesson_lesson_name', :with => 'Hairy Pooter - 15'
       fill_in 'lesson_lesson_number', :with => '123'
     end
