@@ -17,7 +17,7 @@ body{
   color: black;
   text-shadow: 2px 2px black;
   background: image-url('background.jpg');
-  background-size:cover;
+  background-size: cover;
   height: 400px;
   h1{
     @include span-columns(5);
@@ -30,10 +30,10 @@ body{
 }
 .form-card{
   @include outer-container;
-  @include span-columns(5);
-  @include shift(2.5);
+  @include span-columns(8);
+  @include shift(1);
   font-family: Open Sans, sans-serif;
-  height: 345px;
+  height: 500px;
   border: 1px solid #CCCDCD;
   background-color: #FAFAFA;
   border-radius: 2px;
@@ -42,11 +42,11 @@ body{
   .head{
     background-color: #E53935;
     color: #FAFAFA;
-    height: 70px;
+    height: 100px;
     border-bottom: 1px solid #CCCDCD;
     border-radius: 2px;
     p{
-      font-size: 25px;
+      font-size: 45px;
       padding: 15px 0 0 10px;
     }
   }
@@ -63,6 +63,7 @@ body{
   .lesson_lesson_number{
     margin-top: 25px;
     padding: 10px 0;
+    font-size: 25px;
   }
   .form-control{
     height: 30px;
@@ -72,15 +73,18 @@ body{
   }
   .btn-primary{
     border-radius: 180px;
-    float: right;
     height: 70px;
     width: 70px;
-    margin: 50px 10px 0 0;
     background-color: #E53935;
     border: none;
     box-shadow: 1px 2px 3px #B0B0B0;
+    textarea:focus, input:focus{
+      outline: 0;
+    }
   }
-  textarea:focus, input:focus{
-    outline: 0;
+
+  .panel{
+    @include span-columns(8);
+    font-size: 20px;
   }
 }
