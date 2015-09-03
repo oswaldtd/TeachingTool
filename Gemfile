@@ -22,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'byebug'
   gem 'capybara'
+  gem 'codeclimate-test-reporter', group: :test, require: nil
   gem 'foreman'
   gem 'rails_12factor'
   gem 'rspec-rails'
