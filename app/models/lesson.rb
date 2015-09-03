@@ -5,5 +5,6 @@ class Lesson < ActiveRecord::Base
 	accepts_nested_attributes_for :vocabularies, reject_if: :all_blank, allow_destroy: true
 	accepts_nested_attributes_for :sentences, reject_if: :all_blank, allow_destroy: true
 	accepts_nested_attributes_for :books, reject_if: :all_blank, allow_destroy: true
-
+	validates :lesson_name, :lesson_number, :presence => true
+	
 end
