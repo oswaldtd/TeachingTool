@@ -2,7 +2,8 @@ class LessonsController < ApplicationController
   before_action :find_lesson, only: [:show, :edit, :update, :destroy]
 
   def index
-    @lessons = Lesson.order('lessons.lesson_name ASC').all
+    # @lessons = Lesson.order('lessons.lesson_name ASC').all
+    @lessons = Lesson.search(params[:search])
   end
 
   def show
