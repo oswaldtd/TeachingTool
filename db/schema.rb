@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20150901170430) do
 
   create_table "books", force: :cascade do |t|
     t.string   "book_name"
-    t.integer  "page_start"
-    t.integer  "page_end"
+    t.string   "page_start"
+    t.string   "page_end"
     t.integer  "lesson_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150901170430) do
 
   create_table "lessons", force: :cascade do |t|
     t.string   "lesson_name"
-    t.string   "lesson_number"
+    t.integer  "lesson_number"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
