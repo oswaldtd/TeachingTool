@@ -1,5 +1,7 @@
 [![Code Climate](https://codeclimate.com/github/CheeseFry/TeachingTool/badges/gpa.svg)](https://codeclimate.com/github/CheeseFry/TeachingTool)
 [![Test Coverage](https://codeclimate.com/github/CheeseFry/TeachingTool/badges/coverage.svg)](https://codeclimate.com/github/CheeseFry/TeachingTool/coverage)
+[![Build Status](https://travis-ci.org/CheeseFry/TeachingTool.svg)](https://travis-ci.org/CheeseFry/TeachingTool)
+
 # Description
 This is a web app designed to help teachers create teaching material for their classroom in a systematic way that keeps records for future use. The user can CRUD lessons and produce PDFs for printing purposes.
 
