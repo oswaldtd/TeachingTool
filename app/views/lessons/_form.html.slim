@@ -1,28 +1,31 @@
 = simple_form_for @lesson do |f|
 	.panel-body
-	= f.input :lesson_name, input_html: { class: 'form-control' }
-	= f.input :lesson_number, input_html: { class: 'form-control' }
+		= f.input :lesson_name, input_html: { class: 'form-control' }
+		= f.input :lesson_number, input_html: { class: 'form-control' }
 
-	= f.button :submit, class: "btn btn-primary"
 
-	.panel
-		h3 Book
-		#book
-			= f.simple_fields_for :books do |book|
-				= render 'book_fields', f: book
-			.links
-				= link_to_add_association 'add book', f, :books
 
-		h3 Vocabulary
-		#vocabulary
-			= f.simple_fields_for :vocabularies do |vocabulary|
-				= render 'vocabulary_fields', f: vocabulary
-			.links
-				= link_to_add_association 'add Vocabulary', f, :vocabularies
+		.panel
+			.new-book
+				h3 Book
+				#book
+					= f.simple_fields_for :books do |book|
+						= render 'book_fields', f: book
+					.links
+						= link_to_add_association 'add book', f, :books
+			.new-vocab
+				h3 Vocabulary
+				#vocabulary
+					= f.simple_fields_for :vocabularies do |vocabulary|
+						= render 'vocabulary_fields', f: vocabulary
+					.links
+						= link_to_add_association 'add Vocabulary', f, :vocabularies
+			.new-sentences
+				h3 Sentences
+				#sentence
+					= f.simple_fields_for :sentences do |sentence|
+						= render 'sentence_fields', f: sentence
+					.links
+						= link_to_add_association 'add sentence', f, :sentences
 
-		h3 Sentences
-		#sentence
-			= f.simple_fields_for :sentences do |sentence|
-				= render 'sentence_fields', f: sentence
-			.links
-				= link_to_add_association 'add sentence', f, :sentences
+		= f.button :submit, class: "btn btn-primary"

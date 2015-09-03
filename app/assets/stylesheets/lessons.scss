@@ -18,20 +18,20 @@ body{
   text-shadow: 2px 2px black;
   background: image-url('background.jpg');
   background-size: cover;
-  height: 400px;
+  height: 500px;
   h1{
     @include span-columns(5);
     font-size: 5em;
     position: relative;
-    top: 125px;
+    top: 205px;
     text-align: center;
     width: 100%;
   }
 }
 .form-card{
   @include outer-container;
-  @include span-columns(8);
-  @include shift(1);
+  @include span-columns(7);
+  @include shift(1.5);
   font-family: Open Sans, sans-serif;
   height: 500px;
   border: 1px solid #CCCDCD;
@@ -46,6 +46,7 @@ body{
     border-bottom: 1px solid #CCCDCD;
     border-radius: 2px;
     p{
+      @include shift(.5);
       font-size: 45px;
       padding: 15px 0 0 10px;
     }
@@ -55,12 +56,9 @@ body{
     margin: 10px 25px 0 25px;
     font-size: 25px;
   }
-  .lesson_lesson_name{
-    margin-top: 25px;
-    padding: 10px 0;
-    font-size: 25px;
-  }
-  .lesson_lesson_number{
+  .lesson_lesson_name, .lesson_lesson_number{
+    @include span-columns(4);
+    @include shift(0.5);
     margin-top: 25px;
     padding: 10px 0;
     font-size: 25px;
@@ -72,6 +70,7 @@ body{
     font-size: 15px;
   }
   .btn-primary{
+    @include span-columns(1);
     border-radius: 180px;
     height: 70px;
     width: 70px;
@@ -82,9 +81,25 @@ body{
       outline: 0;
     }
   }
-
-  .panel{
-    @include span-columns(8);
-    font-size: 20px;
+  .new-book, .new-vocab, .new-sentences{
+    @include span-columns(2);
+    @include shift(1);
+    margin-top: 25px;
+    h3{
+      font-size: 20px;
+    }
+    #book, #vocabulary, #sentence{
+      .links a{
+        color: black;
+        }
+      .nested-fields a{
+        color: black;
+      }
+    }
+  }
+  .new-vocab{
+    .lesson_vocabularies_word{
+      margin-right: 10px;
+    }
   }
 }
