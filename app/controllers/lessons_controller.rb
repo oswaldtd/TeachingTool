@@ -21,7 +21,6 @@ class LessonsController < ApplicationController
   end
 
   def create
-    # render text: params.inspect
     @lesson = Lesson.new(lesson_params)
     if @lesson.save
       redirect_to @lesson
