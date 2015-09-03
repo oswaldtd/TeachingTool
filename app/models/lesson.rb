@@ -6,5 +6,12 @@ class Lesson < ActiveRecord::Base
 	accepts_nested_attributes_for :sentences, reject_if: :all_blank, allow_destroy: true
 	accepts_nested_attributes_for :books, reject_if: :all_blank, allow_destroy: true
 	validates :lesson_name, :lesson_number, :presence => true
-	
+
+	def self.search(search)
+	  if search
+	    self.where('lesson_name LIKE ?', "%#{search}%")
+	  else
+	    self.all
+		end
+	end
 end
