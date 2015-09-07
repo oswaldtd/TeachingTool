@@ -85,6 +85,7 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.8.0)
+    moby (1.2.0)
     multi_json (1.11.2)
     neat (1.7.2)
       bourbon (>= 4.0)
@@ -206,6 +207,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  moby
   neat
   pg
   puma

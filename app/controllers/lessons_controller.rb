@@ -11,7 +11,9 @@ class LessonsController < ApplicationController
 
   def edit
   end
-
+  def thes
+    @thes = Moby::Thesaurus.new
+  end
   def destroy
     @lesson.destroy
     redirect_to root_path
