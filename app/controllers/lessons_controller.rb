@@ -7,6 +7,15 @@ class LessonsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: 'file_name',   # Excluding ".pdf" extension.
+        template: 'lessons/show.pdf.slim',
+        layout: 'pdf.html.erb',
+        show_as_html: params[:debug].present?
+      end
+    end
   end
 
   def edit

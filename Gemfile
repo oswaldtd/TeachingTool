@@ -18,7 +18,8 @@ gem 'simple_form'
 gem 'slim'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 group :development, :test do
   gem 'byebug'
