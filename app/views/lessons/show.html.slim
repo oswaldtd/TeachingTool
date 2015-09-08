@@ -30,3 +30,4 @@ p= @lesson.lesson_number
 
 = link_to "edit", edit_lesson_path
 = link_to "back", lessons_url
+= link_to "download pdf", lesson_path(@lesson, :format => "pdf")
