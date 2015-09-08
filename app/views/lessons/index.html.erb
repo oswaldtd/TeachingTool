@@ -1,13 +1,19 @@
-<%= form_tag lessons_path, :method => 'get' do %>
-  <p>
-	  <%= text_field_tag :search %>
-	  <%= submit_tag "Search" %>
-  </p>
-<% end %>
-<section>
-	<ul>
+<header class="all-head">
+  <h1>All Lessons</h1>
+</header>
+<section class="all-list">
+  <header class="list-head">
+    <h2>Lesson List</h2>
+  </header>
+  <%= form_tag lessons_path, :method => 'get' do %>
+    <p>
+	    <%= text_field_tag :search %>
+	    <%= submit_tag "Search" %>
+    </p>
+  <% end %>
+	<ul class="list">
 		<% @lessons.each do |lesson| %>
-			<li><%=link_to lesson.lesson_name, lesson %> - <%= lesson.lesson_number %> <%= link_to "Delete", lesson_path(lesson), method: :delete, data: { confirm: "Delete this lesson? "} %> </li>
+		<li><%=link_to lesson.lesson_name, lesson %> - <%= lesson.lesson_number %> <%= link_to "Delete", lesson_path(lesson), method: :delete, data: { confirm: "Delete this lesson? "} %> </li>
 		<% end %>
 	</ul>
 </section>

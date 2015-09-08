@@ -1,0 +1,68 @@
+.all-head{
+  @include outer-container;
+  @include span-columns(10);
+  font-family: Open Sans, sans-serif;
+  background-image: image-url("hallway.jpg");
+  text-shadow: 2px 2px black;
+  background-size: cover;
+  height: 500px;
+  color: black;
+  h1{
+    @include span-columns(5);
+    font-size: 5em;
+    position: relative;
+    top: 210px;
+    text-align: center;
+    width: 100%;
+  }
+}
+.all-list{
+  @include outer-container;
+  @include span-columns(4);
+  @include shift(3.1);
+  font-family: Open Sans, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #CCCDCD;
+  background-color: #FAFAFA;
+  text-decoration: none;
+  .list-head{
+    background-color: #E53935;
+    color: #FAFAFA;
+    height: 100px;
+    border-bottom: 1px solid #CCCDCD;
+    border-radius: 2px;
+    h2{
+      @include shift(.5);
+      font-size: 45px;
+      padding: 15px 0 0 10px;
+    }
+  }
+  form{
+    @include shift(5);
+    p{
+      margin-top: 25px;
+      margin-bottom: 35px;
+      #search{
+        height: 25px;
+        margin-right: 10px;
+      }
+      textarea:focus, input:focus{
+        outline: 0;
+      }
+    }
+  }
+  .list{
+    font-size: 25px;
+    list-style: none;
+    margin-bottom: 35px;
+    li{
+      padding-bottom: 10px;
+      color: black;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}

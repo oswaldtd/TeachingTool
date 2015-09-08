@@ -1,0 +1,17 @@
+.show-head{
+  @include outer-container;
+  @include span-columns(10);
+  font-family: Open Sans, sans-serif;
+  text-shadow: 2px 2px black;
+  background-image: image-url("bus.jpg");
+  background-size: cover;
+  height: 500px;
+  h1{
+    @include span-columns(5);
+    font-size: 5em;
+    position: relative;
+    top: 205px;
+    text-align: center;
+    width: 100%;
+  }
+}
