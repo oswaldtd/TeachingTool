@@ -26,10 +26,18 @@ group :development, :test do
   gem 'byebug'
   gem 'capybara'
   gem 'codeclimate-test-reporter', group: :test, require: nil
-  gem 'foreman'
-  gem 'rails_12factor'
   gem 'rspec-rails'
   gem 'spring'
   gem 'table_print'
   gem 'web-console', '~> 2.0'
+end
+
+group :development do
+  gem 'foreman'
+  gem 'wkhtmltopdf-binary'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'wkhtmltopdf-heroku'
 end
