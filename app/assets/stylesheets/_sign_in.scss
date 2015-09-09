@@ -1,0 +1,43 @@
+.sign-in-page{
+  height: 400px;
+  background: image-url('classroom.jpg') no-repeat 50% 50% fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+.main-page{
+  @include span-columns(10);
+  .top-bar{
+    @include span-columns(10);
+    height: 75px;
+    box-shadow: 2px 3px 2px black;
+    background-color: black;
+    opacity: 0.8;
+  }
+  h1{
+    @include shift(.5);
+    font-family: 'Open sans', sans-serif;
+    color: white;
+    position: absolute;
+    top:20px;
+  }
+  .tag{
+    @include span-columns(5);
+    color: #ffffff;
+    position: relative;
+    top: 175px;
+    text-align: center;
+    width: 100%;
+    h2{
+      font-size: 60px;
+      font-family: sans-serif;
+    }
+    h3{
+      font-family: 'Open sans', sans-serif;
+    }
+  }
+  form{
+    font-family: 'PT Sans', sans-serif;
+  }
+}
