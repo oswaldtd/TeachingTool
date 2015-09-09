@@ -1,15 +1,21 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
+<body class="sign-in-page">
+  <section class="main-page">
+    <header class="top-bar"></header>
+    <h1>Teaching Tool</h1>
+    <div class="tag">
+      <h2>WELCOME TO TEACHING TOOL</h2>
+      <h3>An Education tool that helps teachers create and organize assignments. </h2>
+    </div>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email, required: false, autofocus: true %>
+        <%= f.input :password, required: false %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Log in" %>
+      </div>
+    <% end %>
+  </section>
+</body>
 <%= render "devise/shared/links" %>

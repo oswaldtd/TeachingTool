@@ -16,36 +16,9 @@
 @import "bourbon";
 @import "grid-settings";
 @import "neat";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300|PT+Sans);
-//@import "font-awesome-sprockets";
+@import url(https://fonts.googleapis.com/css?family=Asap|Open+Sans:300|PT+Sans);
 @import "font-awesome";
-@import "lessons.scss";
-@import "index.scss";
-@import "show.scss";
-
-.main-nav{
-  background: #F44336;
-  text-align: center;
-  position: absolute;
-  height: 4em;
-  top: 436px;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-
-  a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1em;
-    font-family: Open Sans, sans-serif;
-  }
-  a:hover {
-    color: black;
-  }
-
-  li {
-    text-decoration: none;
-    display: inline-block;
-    padding: 1.3em;
-  }
-}
+@import "lessons";
+@import "index";
+@import "show";
+@import "sign_in";
