@@ -1,4 +1,7 @@
 header class="show-head"
+meta charset="UTF-8"
+	link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet" type="text/css" /
+
 	h1 Lesson Information
 
 h1= @lesson.lesson_name
@@ -26,7 +29,3 @@ p= @lesson.lesson_number
 		- @lesson.sentences.each do |sentences|
 			ul= sentences.sentence
 			ul= sentences.meaning
-
-
-= link_to "edit", edit_lesson_path
-= link_to "back", lessons_url
