@@ -39,13 +39,26 @@
     }
   }
   form{
-    @include shift(5);
     p{
-      margin-top: 25px;
-      margin-bottom: 35px;
+      @include shift(3.5);
+      margin-top:25px;
+      margin-bottom: 15px;
+      height: 40px;
       #search{
-        height: 25px;
-        margin-right: 10px;
+        @include span-columns(7);
+        font-size: 20px;
+        padding:5px 0;
+        background-color: #F5F5F5;
+        border-radius: 3px;
+      }
+      .search{
+        font-size: 15px;
+        background-color: black;
+        border-radius: 2px;
+        box-shadow: 2px 3px 2px gray;
+        color: white;
+        border: none;
+        padding: 10px 15px;
       }
       textarea:focus, input:focus{
         outline: 0;
@@ -53,15 +66,27 @@
     }
   }
   .list{
-    font-size: 25px;
     list-style: none;
+    margin-top: 35px;
     margin-bottom: 35px;
+    padding: 0 20px;
     li{
-      padding-bottom: 10px;
-      color: black;
-      a{
+      padding: 5px 0;
+      font-size: 25px;
+      border-bottom: 1px solid #f2f2f2;
+      .lessons{
+        @include shift(.5);
         text-decoration: none;
         color: black;
+      }
+      .delete-btn{
+        @include shift(1.5);
+        color: gray;
+        font-size: 20px;
+        :hover{
+          opacity: 0.4;
+        }
+
       }
     }
   }
