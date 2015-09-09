@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'bourbon'
 gem 'cocoon'
 gem 'coffee-rails', '~> 4.1.0'
+gem "font-awesome-rails"
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
