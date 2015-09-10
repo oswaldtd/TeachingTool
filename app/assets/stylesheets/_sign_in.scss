@@ -17,10 +17,10 @@
   }
   h1{
     @include shift(.5);
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Days One', sans-serif;
     color: white;
     position: absolute;
-    top:20px;
+    top: 20px;
   }
   .tag{
     @include span-columns(5);
@@ -38,6 +38,75 @@
     }
   }
   form{
+    @include span-columns(4.5);
+    @include shift(2.8);
     font-family: 'PT Sans', sans-serif;
+    background: white;
+    height: 215px;
+    border-radius: 2px;
+    opacity: 0.8;
+    position: relative;
+    top: 200px;
+    .all-input{
+      margin-top: 50px;
+      @include shift(2.5);
+      .input.email{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .string.email{
+        font-size: 20px;
+        background-color: #F5F5F5;
+        border-radius: 3px;
+        margin-left: 10px;
+      }
+      .password{
+        font-size: 20px;
+        background-color: #F5F5F5;
+        border-radius: 3px;
+        margin-bottom: 3px;
+      }
+    }
+    .btn{
+      @include shift(6);
+      margin-top: 3px;
+      font-size: 15px;
+      background-color: #FF585B;
+      border-radius: 2px;
+      box-shadow: 2px 3px 2px gray;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+    }
+    textarea:focus, input:focus{
+      outline: 0;
+    }
+  }
+  .links{
+    @include span-columns(3);
+    @include shift(7.5);
+    position: absolute;
+    top: 25px;
+    color: white;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    .sign-up{
+      @include span-columns(2.5);
+      display: inline;
+      background-color: #007A88;
+      color: white;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 2px;
+      text-align: center;
+      padding: 5px 0;
+    }
+    .forgot-pwd{
+      @include span-columns(6);
+      display: inline;
+      color: white;
+      text-decoration: none;
+      margin-top: 7px;
+    }
   }
 }
