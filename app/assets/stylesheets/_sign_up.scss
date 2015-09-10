@@ -1,12 +1,12 @@
-.sign-in-page{
+.sign-up-page{
   height: 400px;
-  background: image-url('classroom.jpg') no-repeat 50% 50% fixed;
+  background: image-url('sign_up.png') no-repeat 50% 50% fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
 }
-.main-page{
+.main-signUp{
   @include span-columns(10);
   .top-bar{
     @include span-columns(10);
@@ -22,79 +22,51 @@
     position: absolute;
     top: 20px;
   }
-  .tag{
-    @include span-columns(5);
-    color: #ffffff;
-    position: relative;
-    top: 125px;
-    text-align: center;
-    width: 100%;
-    h2{
-      font-size: 60px;
-      font-family: sans-serif;
-    }
-    h3{
-      font-family: 'Open sans', sans-serif;
-    }
-  }
   form{
-    @include span-columns(4);
-    @include shift(3);
+    @include span-columns(4.5);
+    @include shift(2.8);
     font-family: 'PT Sans', sans-serif;
     background: white;
-    height: 30%;
+    height: 25%;
     border-radius: 2px;
     opacity: 0.8;
     position: relative;
-    top: 210px;
+    top: 250px;
+    box-shadow: 2px 3px 2px #303030;
     padding-top: 40px;
-    .all-input{
+    .all-inputs{
       @include shift(1);
       font-size: 20px;
       padding: 10px;
-      .input.email{
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
       .string.email{
         font-size: 20px;
-        background-color: #F5F5F5;
         border-radius: 3px;
         margin-left: 10px;
       }
       .password{
         font-size: 20px;
-        background-color: #F5F5F5;
         border-radius: 3px;
         margin-bottom: 3px;
       }
-    }
-    .btn{
-      @include shift(6);
-      font-size: 15px;
-      background-color: #FF585B;
-      border-radius: 2px;
-      box-shadow: 2px 3px 2px gray;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-    }
-    textarea:focus, input:focus{
-      outline: 0;
+      #user_password{
+        margin-left: 10px;
+      }
+      #user_password_confirmation{
+        margin-left: 10px;
+      }
     }
   }
   .links{
-    @include span-columns(3);
-    @include shift(7);
+    @include span-columns(2);
+    @include shift(8);
     position: absolute;
     top: 25px;
     color: white;
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
-    .sign-up{
-      @include span-columns(2.5);
+    .log-in{
+      @include span-columns(4);
       display: inline;
-      background-color: #007A88;
       color: white;
       text-decoration: none;
       border: 2px solid white;
@@ -102,12 +74,22 @@
       text-align: center;
       padding: 5px 0;
     }
-    .forgot-pwd{
-      @include span-columns(5);
-      display: inline;
-      color: white;
-      text-decoration: none;
-      margin-top: 7px;
+    .log-in:hover{
+      background-color: #007A88;
     }
+  }
+  .btn{
+    @include shift(6);
+    margin-top: 5px;
+    font-size: 15px;
+    background-color: #FF585B;
+    border-radius: 2px;
+    box-shadow: 2px 3px 2px gray;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+  }
+  textarea:focus, input:focus{
+    outline: 0;
   }
 }
