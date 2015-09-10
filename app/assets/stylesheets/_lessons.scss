@@ -38,7 +38,7 @@ body{
       text-decoration: none;
       color: #fff;
       font-size: 1em;
-      font-family: Open Sans, sans-serif;
+      font-family: 'Open Sans', sans-serif;
     }
     a:hover {
       color: black;
@@ -54,7 +54,7 @@ body{
 .form-card{
   @include span-columns(7);
   @include shift(1.5);
-  font-family: Open Sans, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   height: 800px;
   border: 1px solid #CCCDCD;
   background-color: #FAFAFA;
