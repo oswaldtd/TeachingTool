@@ -45,6 +45,6 @@ br
 		ul= sentences.meaning
 
 
-= link_to "edit", edit_lesson_path
-= link_to "back", lessons_url
-= link_to "download pdf", lesson_path(@lesson, :format => "pdf")
+= link_to "edit", edit_lesson_path, class: "btn btn-default"
+= link_to "back", lessons_url, class: "btn btn-default"
+= link_to "download pdf", lesson_path(@lesson, :format => "pdf"), class: "btn btn-default"
