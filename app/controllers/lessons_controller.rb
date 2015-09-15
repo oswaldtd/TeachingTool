@@ -20,6 +20,7 @@ class LessonsController < ApplicationController
 
   def edit
   end
+
   def update
     if @lesson.update(lesson_params)
 			redirect_to @lesson
