@@ -1,12 +1,12 @@
-// @import "neat-helpers";
-//
-// //grid settings
-// $column: 90px;
-// $gutter: 30px;
-// $grid-columns: 10;
-// $max-width: 100%;
-//
-// $visual-grid: true;
-//
-// //breakpoints
-// $tablet: new-breakpoint(max-width 768px 8);
+@import "neat-helpers";
+
+//grid settings
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: 100%;
+
+$visual-grid: false;
+
+//breakpoints
+$tablet: new-breakpoint(max-width 768px 8);
