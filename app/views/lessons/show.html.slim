@@ -1,6 +1,7 @@
 header class="show-head"
 	h1 Lesson Information
 
+/ Assigned Homework Section
 h3 ELITE YEONHEE
 h1= @lesson.lesson_name
 p= @lesson.lesson_number
@@ -14,9 +15,9 @@ table class="top-table"
 	tbody
 		- @lesson.vocabularies.each_with_index do |vocabulary, i|
 			tr
-				td=i+1
-				td= vocabulary.word
-				td= vocabulary.meaning
+				td =i+1
+				td = vocabulary.word
+				td = vocabulary.meaning
 				td
 br
 table
@@ -27,22 +28,54 @@ table
 			td ~
 			td = book.page_end
 
+/ Rewriting Vocabulary Section
 br
-table class="rewrite-table"
+h2 Write Vocabulary Three Times & Meaning One Time. (단어를 3번 쓴 후 뜻을 한번 쓰세요.)
+table align="center" class="rewrite-table"
+	- @lesson.vocabularies.each_with_index do |vocabulary, i|
+		tr
+			td width="60px" = i+1
+			td width="350px" style="color: #B9BFC3;" = vocabulary.word
+			td width="350px"
+			td width="350px"
+			td width="350px"
+
+/ Rewriting Sentences Section
+br
+h2 Copy the following sentences TWO times.
+table class="sentence-table"
+	- @lesson.sentences.each do |sentences|
+		tr
+			td width="1400px" style="color: #B9BFC3;"= sentences.sentence
+		tr
+			td= sentences.meaning || "1" &nbsp;
+		tr
+			td colspan="1" &nbsp;
+
+/ Writing Sentences Section
+br
+h2 Make 5 sentences using today's vocabulary. (Do not use "I" as a subject more than once.)
+table class="sentence-table"
+	- 5.times do |i|
+		tr
+			td width="1400px" colspan="1" text-align="left" = i+1
+
+/ Corrected Sentences Section
+br
+h2 Rewrite your 5 sentences using your teacher's corrections.
+table class="sentence-table"
+	- 5.times do |i|
+		tr
+			td width="1400px" colspan="1" text-align="left" = i+1
+
+/ Practice Quiz Section
+br
+h2 Write the words next to the definition
+table class="mini-quiz-table"
 	- @lesson.vocabularies.each do |vocabulary|
 		tr
-			td= vocabulary.word
-			td
-			td
-			td
-br
+			td = vocabulary.word
 
-
-
-
-	- @lesson.sentences.each do |sentences|
-		ul= sentences.sentence
-		ul= sentences.meaning
 
 div class="controls"
 	= link_to "edit", edit_lesson_path, class: "btn btn-default"
