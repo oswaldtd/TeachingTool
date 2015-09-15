@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   def index
     # @lessons = Lesson.order('lessons.lesson_name ASC').all
-    @lessons = Lesson.search(params[:search])
+    @lessons = Lesson.search(params[:search]).paginate(page: params[:page], per_page: 10)
   end
 
   def show
@@ -32,6 +32,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson.destroy
     redirect_to root_path
+    # flash[:success] = "Lesson was successfully deleted."
   end
 
   def new

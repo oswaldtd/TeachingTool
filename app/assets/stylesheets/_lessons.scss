@@ -55,7 +55,7 @@ body{
   @include span-columns(7);
   @include shift(1.5);
   font-family: 'Open Sans', sans-serif;
-  height: 800px;
+  min-height: 800px;
   border: 1px solid #CCCDCD;
   background-color: #FAFAFA;
   border-radius: 2px;

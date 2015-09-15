@@ -21,10 +21,13 @@
 	<ul class="list">
 		<% @lessons.each do |lesson| %>
 		<li>
-      <%=link_to lesson.lesson_name, lesson, :class => "lessons" %> - <%= lesson.lesson_number %> <%= link_to lesson_path(lesson), method: :delete, data: { confirm: "Delete this lesson? "}, :class => "delete-btn" do %>
-        <i class="fa fa-trash"></i>
+      <%=link_to lesson.lesson_name, lesson, :class => "lessons" %>
+      <span class="lesson-number"><%= lesson.lesson_number%></span>
+      <%= link_to lesson_path(lesson), method: :delete, data: { confirm: "Delete this lesson? "}, :class => "delete-btn" do %>
+        <i align="right" class="fa fa-trash"></i>
       <% end %>
     </li>
 		<% end %>
 	</ul>
+  <div class="apple_pagination"><%= will_paginate @lessons %></div>
 </section>
