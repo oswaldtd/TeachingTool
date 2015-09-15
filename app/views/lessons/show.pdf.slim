@@ -1,33 +1,32 @@
-header class="show-head"
-	h1 Lesson Information
 
 h3 ELITE YEONHEE
 h1= @lesson.lesson_name
 p= @lesson.lesson_number
 table class="top-table"
-	tr
-		th Word
-		th Meaning
-		th My Definition
-	tr
-	- @lesson.vocabularies.each do |vocabulary|
+	thead
 		tr
-			td= vocabulary.word
-			td= vocabulary.meaning
-			td
+			th
+			th Word
+			th Meaning
+			th My Definition
+	tbody
+		- @lesson.vocabularies.each_with_index do |vocabulary, i|
+			tr
+				td=i+1
+				td= vocabulary.word
+				td= vocabulary.meaning
+				td
 br
 table
-	tr
-		- @lesson.books.each do |book|
-			tr
-				td = book.book_name
-				td = book.page_start
-				td ~
-				td = book.page_end
+	- @lesson.books.each do |book|
+		tr
+			td = book.book_name
+			td = book.page_start
+			td ~
+			td = book.page_end
 
 br
 table class="rewrite-table"
-	tr
 	- @lesson.vocabularies.each do |vocabulary|
 		tr
 			td= vocabulary.word
