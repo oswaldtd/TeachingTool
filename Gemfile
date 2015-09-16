@@ -22,6 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 gem 'wicked_pdf'
 
+gem 'faker'
+gem 'factory_girl_rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'capybara'
