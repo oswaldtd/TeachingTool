@@ -1,0 +1,29 @@
+header.all-head
+	h1 All Lessons
+
+	= render partial: 'navbar'
+section.all-list
+	header.list-head
+		h2 Lesson List
+	= form_tag lessons_path, :method => 'get' do
+		p
+			= text_field_tag :search
+			= submit_tag "Search", :class => "search"
+
+    table class="all-table"
+  		thead
+  			tr
+  				th Lesson Name
+  				th #
+  				th Remove
+  		tbody.list
+  			- @lessons.each do |lesson|
+  				tr
+  					td = link_to lesson.lesson_name, lesson, :class => "lessons"
+  					td = lesson.lesson_number
+  					td = link_to lesson_path(lesson), method: :delete, data: { confirm: "Delete this lesson? "}, :class => "delete-btn" do
+  							i.fa.fa-trash
+
+
+  	.apple_pagination
+  		= will_paginate @lessons

@@ -1,13 +1,18 @@
 .show-head{
   @include span-columns(10);
+  color: white;
   font-family: Open Sans, sans-serif;
-  text-shadow: 2px 2px black;
+  text-shadow: 1.5px 1.5px black;
   background-image: image-url("bus.jpg");
   background-size: cover;
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
   height: 500px;
   width: 100%;
+  text-transform: uppercase;
   h1{
     @include span-columns(5);
+    background-color: rgba(241, 213, 178, 0.6);
     font-size: 5em;
     position: relative;
     top: 205px;
@@ -15,18 +20,19 @@
     width: 100%;
   }
 }
-
-table, tr, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+.top-table{
+  table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  tbody td {
+      padding: 0 10px;
+      margin: 0 10px 0 10px;
+      // text-align: left;
+      border-right: 1px solid black;
+  }
 }
 
-tbody td {
-    padding: 0 10px;
-    margin: 0 10px 0 10px;
-    // text-align: left;
-    border-right: 1px solid black;
-}
 
 .rewrite-table{
   text-align: center;
@@ -53,7 +59,7 @@ tbody td {
   text-align: left;
   font-size: 3em;
   font-family: 'Coming Soon', cursive;
-  // width: 1000px;
+  width: 1400px;
   margin: 1em;
   td{
     // width: 250px;
