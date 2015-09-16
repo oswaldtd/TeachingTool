@@ -44,6 +44,7 @@
     }
   }
 }
+
 .all-list{
   @include outer-container;
   @include span-columns(6);
@@ -55,6 +56,32 @@
   background-color: #FAFAFA;
   text-decoration: none;
   box-shadow: 5px 5px 10px #B0B0B0;
+
+  .all-table{
+    color: black;
+    width: 550px;
+    margin: auto;
+    th{
+      padding-left: 5px;
+      color: black;
+      text-align: left;
+    }
+    .banana{
+      text-align: center;
+    }
+    .delete-btn{
+      padding-left: 25px;
+      @include shift(0);
+      color: gray;
+      font-size: 20px;
+      :hover{
+        opacity: 0.4;
+      }
+    }
+  }
+
+
+
   .list-head{
     background-color: #E34E44;
     color: #FAFAFA;
@@ -100,7 +127,7 @@
     margin-top: 35px;
     margin-bottom: 35px;
     padding: 0 20px;
-    li{
+    td{
       padding: 5px 0;
       font-size: 25px;
       border-bottom: 1px solid #f2f2f2;
@@ -109,15 +136,8 @@
         text-decoration: none;
         color: black;
       }
-      .delete-btn{
-        float: right;
-        @include shift(1.5);
-        color: gray;
-        font-size: 20px;
-        :hover{
-          opacity: 0.4;
-        }
-      }
+
+
     }
   }
 }
@@ -130,22 +150,22 @@
   cursor: default; }
   .apple_pagination a, .apple_pagination span {
     padding: 0.2em 0.3em; }
-  .apple_pagination .disabled {
-    color: #aaaaaa; }
-  .apple_pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    background-color: #bebebe;
-    display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
-    line-height: 1.5;
-    -moz-border-radius: 1em;
-    -webkit-border-radius: 1em;
-    border-radius: 1em;
-    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-  .apple_pagination a {
-    text-decoration: none;
-    color: black; }
-    .apple_pagination a:hover, .apple_pagination a:focus {
-      text-decoration: underline; }
+    .apple_pagination .disabled {
+      color: #aaaaaa; }
+      .apple_pagination .current {
+        font-style: normal;
+        font-weight: bold;
+        background-color: #bebebe;
+        display: inline-block;
+        width: 1.4em;
+        height: 1.4em;
+        line-height: 1.5;
+        -moz-border-radius: 1em;
+        -webkit-border-radius: 1em;
+        border-radius: 1em;
+        text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+        .apple_pagination a {
+          text-decoration: none;
+          color: black; }
+          .apple_pagination a:hover, .apple_pagination a:focus {
+            text-decoration: underline; }
