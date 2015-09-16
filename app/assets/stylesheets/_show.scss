@@ -10,6 +10,7 @@
   height: 500px;
   width: 100%;
   text-transform: uppercase;
+  opacity: 0.75;
   h1{
     @include span-columns(5);
     background-color: rgba(241, 213, 178, 0.6);
