@@ -9,7 +9,7 @@ Lesson.delete_all
 Book.delete_all
 Sentence.delete_all
 Vocabulary.delete_all
-i=1
+i=2
 while i < 20
 	Lesson.create(lesson_name: Faker::App.name, lesson_number: Faker::Number.number(3), id:"#{i}")
 	2.times do
