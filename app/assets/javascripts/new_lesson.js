@@ -1,0 +1,12 @@
+$('new.html.slim').ready(function(){
+  $('a.add_fields').trigger('click');
+	$('a.add_fields').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+	$('a[data-association=vocabulary]').trigger('click');
+});

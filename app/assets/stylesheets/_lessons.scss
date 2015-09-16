@@ -85,9 +85,11 @@ body{
   .lesson_lesson_name, .lesson_lesson_number{
     @include span-columns(4);
     @include shift(0.5);
-    margin-top: 25px;
+    width: 40%;
+    margin-top: 20px;
     padding: 10px 0;
     font-size: 25px;
+    margin:6%;
   }
   .form-control{
     height: 30px;
@@ -110,9 +112,10 @@ body{
     outline: 0;
   }
   .new-book, .new-vocab, .new-sentences{
-    @include span-columns(2);
-    @include shift(.5);
+    // @include span-columns(2);
+    // @include shift(.5);
     margin-top: 25px;
+    margin-left: 1em;
     h3{
       font-size: 20px;
     }
@@ -131,4 +134,10 @@ body{
       }
     }
   }
+}
+
+.book-create, .vocabulary-create, .sentence-create{
+  display: inline-flex;
+  list-style-type:none;
+
 }

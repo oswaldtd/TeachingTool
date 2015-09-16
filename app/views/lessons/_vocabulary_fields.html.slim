@@ -1,4 +1,5 @@
 .nested-fields
-  = f.input :word
-  = f.input :meaning
-  = link_to_remove_association "remove vocabulary", f
+  ul.vocabulary-create
+    li= f.input :word
+    li= f.input :meaning
+    li= link_to_remove_association "remove vocabulary", f

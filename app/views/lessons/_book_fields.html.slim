@@ -1,5 +1,7 @@
-.nested-fields
-  = f.input :book_name
-  = f.input :page_start
-  = f.input :page_end
-  = link_to_remove_association "remove book", f
+nested-fields
+  ul.book-create
+    li= f.input :book_name
+    li= f.input :page_start
+    li= f.input :page_end
+    li= link_to_remove_association "remove book", f
+      

@@ -1,4 +1,5 @@
 .nested-fields
-  = f.input :sentence
-  = f.input :meaning
-  = link_to_remove_association "remove sentence", f
+  ul.sentence-create
+    li= f.input :sentence
+    li= f.input :meaning
+    li= link_to_remove_association "remove sentence", f
