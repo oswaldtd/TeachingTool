@@ -47,6 +47,44 @@
     padding: 1.3em;
   }
 }
+
+.controls a {
+  @include span-columns(12);
+    width: 140px;
+    position: relative;
+    left: 35.7em;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: Helvetica;
+    text-transform: Capitalize;
+    transition: all .2s ease-in;
+
+    &:hover {
+      background: #7f1919;
+      border-color: #7f1919;
+    }
+}
+.btn-default {
+    margin:10px;
+    padding: 10px 15px;
+    background: #E53935;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #E53935;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.magic-class {
+  @include span-columns(10);
+  @include shift(1.2);
+  margin-top: 15px;
+
 p.school{
   text-align: center;
   font-weight:bold;
@@ -54,7 +92,7 @@ p.school{
   color: white;
 }
 .container{
-  @include span-columns(12);
+  @include span-columns(10);
   font-family: 'Open Sans', sans-serif;
   // margin: auto;
   // width: 1200px;
@@ -62,9 +100,19 @@ p.school{
   position: relative;
 }
 .left-table-combo{
-  @include span-columns(1 of 4);
+  @include span-columns(3.3 of 10);
+  @include shift(3);
+  height: 276px;
   border: 1px solid black;
   margin: 0;
+  position: relative;
+  left: 1.5em;
+  .lesson-name{
+    background-color:  #C5D9F1;
+    width: 100%;
+    border: #C5D9F1;
+
+  }
   .homework{
     border: none;
     width: 100%;
@@ -90,10 +138,10 @@ p.school{
   }
 }
 .top-table{
-    @include span-columns(4 of 12);
+    @include span-columns(6.5 of 10);
     position: relative;
     border-collapse: collapse;
-    margin-right: 20%;
+    left: 1.5em;
   table,th, tr, td{
     border: 1px solid black;
     font-family: 'Open Sans', sans-serif;
@@ -105,7 +153,11 @@ p.school{
       border-right: 1px solid black;
   }
   td{
-    width: 20%;
+    width: 25px;
+    height: 25px;
+  }
+  .columns {
+    width:200px;
   }
 }
 .books-table{
@@ -118,7 +170,9 @@ p.school{
   @include span-columns(1 of 4);
 }
 
-
+.big-box{
+  top: 10px;
+}
 .rewrite-table{
     border-collapse: collapse;
   table,th, tr, td{
@@ -133,7 +187,7 @@ p.school{
   text-align: center;
   font-size: 3em;
   font-family: 'Coming Soon', cursive;
-  width: 1400px;
+  width: 1156px;
   margin: .5em;
   td{
     // width: 250px;
@@ -164,7 +218,7 @@ p.school{
   text-align: left;
   font-size: 3em;
   font-family: 'Coming Soon', cursive;
-  width: 1400px;
+  width: 1156px;
   margin: .5em;
   td{
     // width: 250px;
@@ -189,37 +243,6 @@ p.school{
 
 
 
-.btn-default {
-    margin:10px;
-    padding: 10px 15px;
-    background: #E53935;
-    color: #FFF;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    border: solid 1px #E53935;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-
-.controls a {
-    width: 140px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-family: Helvetica;
-    text-transform: Capitalize;
-    transition: all .2s ease-in;
-
-    &:hover {
-      background: #7f1919;
-      border-color: #7f1919;
-    }
-}
-
 h2{
   width: 100%;
   height: 20%;
@@ -240,8 +263,11 @@ li.sample{
 }
 
 .mini-quiz-wordbank{
-  width: 1000px;
+  @include span-columns(7.87);
+  padding: 0;
   height:100px;
+  position: relative;
+  left: 25px;
   // border: 1px solid black;
   text-decoration: none;
 }
@@ -256,11 +282,15 @@ li.mini-quiz-word{
   border: 1px solid black;
 }
 .quiz-exercise{
-  position: inherit;
+  @include span-columns(3);
+  position: relative;
+  left: 25px;
   font-family: Open Sans, sans-serif;
 }
 
 td.blank{
   width: 200px;
+  padding:5px 0;
   border-bottom: 1px solid black;
+  }
 }
