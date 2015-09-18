@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Days+One|Open+Sans:300|PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Coming+Soon);
+
+.magic-class {
+  @include span-columns(10);
+  @include shift(1.2);
+  margin-top: 15px;
+
+p.school{
+  text-align: center;
+  font-weight:bold;
+  background-color: #1F497D;
+  color: white;
+}
+.container{
+  @include span-columns(10);
+  font-family: 'Open Sans', sans-serif;
+  // margin: auto;
+  // width: 1200px;
+  display: inline-block;
+  position: relative;
+}
+.left-table-combo{
+  @include span-columns(3.3 of 10);
+  @include shift(3);
+  height: 276px;
+  border: 1px solid black;
+  margin: 0;
+  position: relative;
+  left: 1.5em;
+  .lesson-name{
+    background-color:  #C5D9F1;
+    width: 100%;
+    border: #C5D9F1;
+
+  }
+  .homework{
+    border: none;
+    width: 100%;
+    background-color: #1F497D;
+    color: white;
+    th{
+      width: 4em;
+    }
+  }
+}
+.reading-sign{
+  @include span-columns(1 of 4);
+  font-family: 'Open Sans', sans-serif;
+  border-top: 1px solid black;
+  width: 100%;
+  height: 124px;
+  text-align: center;
+  margin: auto;
+  padding-left: 25%;
+  padding-top: 10%;
+  td{
+    font-weight: bolder;
+  }
+}
+.top-table{
+    @include span-columns(6.5 of 10);
+    position: relative;
+    border-collapse: collapse;
+    left: 1.5em;
+  table,th, tr, td{
+    border: 1px solid black;
+    font-family: 'Open Sans', sans-serif;
+  }
+  tbody td {
+      padding: 0 10px;
+      margin: 0 10px 0 10px;
+      // text-align: left;
+      border-right: 1px solid black;
+  }
+  td{
+    width: 25px;
+    height: 25px;
+  }
+  .columns {
+    width:200px;
+  }
+}
+.books-table{
+  background-color: #C5D9F1;
+  @include span-columns(1 of 4);
+  width: 100%;
+}
+.left-table{
+  width: 100%;
+}
+
+.big-box{
+  top: 10px;
+}
+.rewrite-table{
+    border-collapse: collapse;
+  table,th, tr, td{
+    border: 1px solid black;
+  }
+  tbody td {
+      padding: 0 10px;
+      margin: 0 10px 0 10px;
+      // text-align: left;
+      border-right: 1px solid black;
+  }
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Coming Soon', cursive;
+  width: 1156px;
+  margin: .5em;
+  td{
+    // width: 250px;
+    background: transparent; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNmZjMyMzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1OSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiMyMDdjY2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, transparent 29%, transparent 30%, transparent 31%, transparent 68%, #ff3232 69%, transparent 70%, transparent 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%,transparent), color-stop(30%,#207cca), color-stop(31%,transparent), color-stop(68%,transparent), color-stop(69%,#ff3232), color-stop(70%,transparent), color-stop(100%,transparent)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* IE10+ */
+    background: linear-gradient(to bottom, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=0 ); /* IE6-8 */
+  }
+}
+
+.sentence-table{
+    border-collapse: collapse;
+  table,th, tr, td{
+    border: 1px solid black;
+  }
+  tbody td {
+      padding: 0 10px;
+      margin: 0 10px 0 10px;
+      // text-align: left;
+      border-right: 1px solid black;
+  }
+  text-align: left;
+  font-size: 3em;
+  font-family: 'Coming Soon', cursive;
+  width: 1156px;
+  margin: .5em;
+  td{
+    // width: 250px;
+    background: transparent; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyOSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNmZjMyMzIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzMSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI1OSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiMyMDdjY2EiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI2MSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, transparent 29%, transparent 30%, transparent 31%, transparent 68%, #ff3232 69%, transparent 70%, transparent 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(29%,transparent), color-stop(30%,#207cca), color-stop(31%,transparent), color-stop(68%,transparent), color-stop(69%,#ff3232), color-stop(70%,transparent), color-stop(100%,transparent)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* IE10+ */
+    background: linear-gradient(to bottom, transparent 29%,#207cca 30%,transparent 31%,transparent 68%,#ff3232 69%,transparent 70%,transparent 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='transparent',GradientType=0 ); /* IE6-8 */
+    overflow: hidden;
+    height: 74px;
+  }
+}
+
+@media print {
+    .splitter {page-break-after: always;}
+}
+
+
+
+h2{
+  width: 100%;
+  height: 20%;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+
+}
+li{
+  margin-left: 10%;
+}
+
+li.sample{
+  font-family: Open Sans, sans-serif;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.mini-quiz-wordbank{
+  @include span-columns(7.87);
+  padding: 0;
+  height:100px;
+  position: relative;
+  left: 25px;
+  // border: 1px solid black;
+  text-decoration: none;
+}
+
+
+li.mini-quiz-word{
+  @include span-columns(2);
+  font-family: Open Sans, sans-serif;
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid black;
+}
+.quiz-exercise{
+  @include span-columns(3);
+  position: relative;
+  left: 25px;
+  font-family: Open Sans, sans-serif;
+}
+
+td.blank{
+  width: 200px;
+  padding:5px 0;
+  border-bottom: 1px solid black;
+  }
+}
