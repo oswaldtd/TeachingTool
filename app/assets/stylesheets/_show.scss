@@ -120,7 +120,7 @@ p.school{
     background-color: #1F497D;
     color: white;
     th{
-      width: 20px;
+      width: 4em;
     }
   }
 }
@@ -168,7 +168,6 @@ p.school{
 }
 .left-table{
   width: 100%;
-  @include span-columns(1 of 4);
 }
 
 .big-box{
